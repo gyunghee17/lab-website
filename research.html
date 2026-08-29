@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Research — Jo Lab, Hanyang University</title>
-<meta name="description" content="Cryo-EM and computational structural biology research at Hanyang University.">
+<meta name="description" content="Cryo-EM-driven structural vaccinology and AI-based protein design at Hanyang University.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
@@ -39,105 +39,92 @@
   <div class="wrap">
     <p class="eyebrow">Research</p>
     <h1>What we work on</h1>
-    <p>Our long-term goal is to understand <span class="todo">[one-sentence statement of
-    your central biological question]</span> at the level of atomic structure.</p>
+    <p>Structural and mechanistic studies of antibody–antigen recognition, to guide
+    immunogen design and universal vaccine strategies.</p>
   </div>
 </section>
 
-<!-- ===================== PROJECT 1 ===================== -->
+<!-- ======================================================
+     MAIN FIGURE
+     Put your structure figure in the images folder, then replace the
+     placeholder <div class="frame"> below with:
+        <div class="frame"><img src="images/research1.jpg" alt="short description"></div>
+     A wide figure (roughly 16:9) works best here.
+     If you would rather show two figures side by side, delete this block and
+     use the "TWO FIGURES" block further down instead.
+====================================================== -->
 <section class="block">
   <div class="wrap">
-    <div class="grid grid-2">
-      <div>
-        <p class="eyebrow" style="color:var(--accent);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;">Project 01</p>
-        <h2>Structural basis of <span class="todo">[process]</span></h2>
-        <p><span class="todo">[2–3 sentences. What is the system? Why does it matter
-        biologically or medically? What is unknown about it?]</span></p>
-        <p><span class="todo">[What will you do about it? e.g. "We determine cryo-EM
-        structures of the complex trapped in successive states of its cycle, and use
-        mutagenesis and functional assays to test the mechanism the structures suggest."]</span></p>
-        <p><strong>Methods:</strong> Single-particle cryo-EM · protein expression and
-        purification · <span class="todo">[assay]</span></p>
-      </div>
-      <div class="pi-photo" style="aspect-ratio:4/3;">
-        <!-- Replace with: <img src="images/research1.jpg" alt="Cryo-EM map of ..."> -->
+
+    <figure class="photo figure-wide">
+      <div class="frame">
         Figure placeholder<br>images/research1.jpg
       </div>
+      <figcaption><span class="todo">[Caption — e.g. Cryo-EM structure of a broadly
+      neutralizing antibody bound to influenza neuraminidase.]</span></figcaption>
+    </figure>
+
+    <div class="narrow" style="margin: 52px auto 0;">
+      <p>Antibodies are the most direct readout we have of how the immune system sees a
+      pathogen. Our lab uses single-particle cryo-electron microscopy — including
+      polyclonal epitope mapping (cryo-EMPEM), which resolves an entire serum antibody
+      repertoire rather than one antibody at a time — to determine how human antibodies
+      engage viral antigens, why a few of those interactions protect broadly across
+      strains, and how early exposure imprints and constrains the repertoire that
+      follows. We pair this with AI-based protein design to build immunogens that focus
+      the response on the epitopes that matter, then test those designs structurally and
+      functionally. The aim is to turn descriptions of immune recognition into design
+      rules for universal vaccines and therapeutic antibodies.</p>
     </div>
+
   </div>
 </section>
 
-<!-- ===================== PROJECT 2 ===================== -->
+<!-- ======================================================
+     TWO FIGURES (optional)
+     Delete this whole section if you only want one figure.
+====================================================== -->
 <section class="block tinted">
   <div class="wrap">
     <div class="grid grid-2">
-      <div class="pi-photo" style="aspect-ratio:4/3;">
-        <!-- Replace with: <img src="images/research2.jpg" alt="..."> -->
-        Figure placeholder<br>images/research2.jpg
-      </div>
-      <div>
-        <p class="eyebrow" style="color:var(--accent);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;">Project 02</p>
-        <h2>Molecular machines in their native context</h2>
-        <p><span class="todo">[2–3 sentences describing your in-situ / cryo-ET or
-        cellular structural biology direction.]</span></p>
-        <p>Purified complexes tell us what a machine can do; imaging inside cells tells
-        us what it actually does. We use cryo-electron tomography and subtomogram
-        averaging to bridge the two.</p>
-        <p><strong>Methods:</strong> Cryo-ET · subtomogram averaging · correlative
-        light and electron microscopy</p>
-      </div>
+
+      <figure class="photo">
+        <div class="frame">
+          Figure placeholder<br>images/research2.jpg
+        </div>
+        <figcaption><span class="todo">[Caption]</span></figcaption>
+      </figure>
+
+      <figure class="photo">
+        <div class="frame">
+          Figure placeholder<br>images/research3.jpg
+        </div>
+        <figcaption><span class="todo">[Caption]</span></figcaption>
+      </figure>
+
     </div>
   </div>
 </section>
 
-<!-- ===================== PROJECT 3 ===================== -->
+<!-- ======================================================
+     RESEARCH INTERESTS
+     Short list, not full project descriptions. Add or remove <li> lines freely.
+====================================================== -->
 <section class="block">
-  <div class="wrap">
-    <div class="grid grid-2">
-      <div>
-        <p class="eyebrow" style="color:var(--accent);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;">Project 03</p>
-        <h2>Computational structure prediction and design</h2>
-        <p>Deep-learning models now predict folds and complexes at a rate that
-        outstrips experimental validation. We treat these predictions as hypotheses:
-        we ask where they are confident and wrong, where they are uncertain and
-        informative, and we design experiments accordingly.</p>
-        <p><span class="todo">[Add specifics: which predictors, what you build on top,
-        whether you do de novo design, MD, or large-scale screening.]</span></p>
-        <p><strong>Methods:</strong> AlphaFold / RoseTTAFold-class prediction ·
-        molecular dynamics · protein design · structural bioinformatics</p>
-      </div>
-      <div class="pi-photo" style="aspect-ratio:4/3;">
-        <!-- Replace with: <img src="images/research3.jpg" alt="..."> -->
-        Figure placeholder<br>images/research3.jpg
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== FACILITIES ===================== -->
-<section class="block tinted">
-  <div class="wrap">
+  <div class="wrap narrow">
     <div class="section-head">
-      <p class="eyebrow">Facilities</p>
-      <h2>Equipment and resources</h2>
+      <p class="eyebrow">Directions</p>
+      <h2>Research interests</h2>
     </div>
-    <div class="grid grid-3">
-      <div class="card">
-        <h3>Sample preparation</h3>
-        <p><span class="todo">[e.g. Vitrobot, glow discharger, ÄKTA FPLC, ultracentrifuge,
-        insect/mammalian expression]</span></p>
-      </div>
-      <div class="card">
-        <h3>Microscopy access</h3>
-        <p><span class="todo">[e.g. screening TEM on campus; Krios time through
-        KBSI / Institute for Basic Science / national facility]</span></p>
-      </div>
-      <div class="card">
-        <h3>Computing</h3>
-        <p><span class="todo">[e.g. GPU workstation cluster for RELION / cryoSPARC and
-        structure prediction]</span></p>
-      </div>
-    </div>
+    <ul class="interests">
+      <li>Cryo-EM-driven structural vaccinology integrated with AI-based protein design</li>
+      <li>Cryo-EM-based polyclonal epitope mapping (cryo-EMPEM) for antibody discovery
+      and repertoire analysis</li>
+      <li>Structural and mechanistic dissection of immune imprinting dynamics</li>
+      <li>Development of broadly neutralizing antibodies for therapeutic applications</li>
+      <li>Structure-based antibody engineering</li>
+      <li>Antibody discovery using phage-displayed antibody libraries</li>
+    </ul>
   </div>
 </section>
 
