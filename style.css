@@ -249,7 +249,16 @@ section.block.tinted { background: var(--bg-soft); border-block: 1px solid var(-
 .pub .authors { font-size: .92rem; color: var(--ink-soft); margin: 0 0 4px; }
 .pub .authors .me { color: var(--ink); font-weight: 600; }
 .pub .venue { font-size: .92rem; color: var(--ink-soft); margin: 0; }
-.pub .venue em { font-style: italic; }
+/* Journal name — bold, dark, and underlined so it stands out in the citation */
+.pub .venue em {
+  font-style: italic;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
 .pub .links { margin-top: 8px; display: flex; gap: 14px; flex-wrap: wrap; }
 .pub .links a {
   font-size: .8rem; letter-spacing: .04em; text-transform: uppercase;
