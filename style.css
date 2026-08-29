@@ -215,7 +215,7 @@ section.block.tinted { background: var(--bg-soft); border-block: 1px solid var(-
 /* Timeline (education / appointments) */
 .timeline { list-style: none; margin: 0; padding: 0; }
 .timeline li {
-  display: grid; grid-template-columns: 130px 1fr; gap: 20px;
+  display: grid; grid-template-columns: 152px 1fr; gap: 20px;
   padding: 15px 0; border-bottom: 1px solid var(--rule);
 }
 .timeline li:last-child { border-bottom: none; }
@@ -325,7 +325,12 @@ section.block.tinted { background: var(--bg-soft); border-block: 1px solid var(-
   font-size: .78rem; letter-spacing: .08em; text-transform: uppercase;
   color: var(--ink-faint); font-weight: 600; padding-top: 3px;
 }
-.info-row dd { margin: 0; }
+.info-row dd { margin: 0; overflow-wrap: anywhere; }
+
+/* Narrow sidebar version (PI page): label sits above the value, not beside it,
+   so long email addresses cannot overflow into the next column. */
+.pi-contact .info-row { grid-template-columns: 1fr; gap: 3px; padding: 12px 0; }
+.pi-contact .info-row dt { padding-top: 0; }
 .map-frame {
   aspect-ratio: 4 / 3; border-radius: 10px; overflow: hidden;
   border: 1px solid var(--rule); background: var(--bg-soft);
