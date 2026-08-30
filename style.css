@@ -237,16 +237,19 @@ section.block.tinted { background: var(--bg-soft); border-block: 1px solid var(-
   margin: 46px 0 18px; padding-bottom: 8px; border-bottom: 2px solid var(--ink);
 }
 .pub-year:first-of-type { margin-top: 0; }
+/* Narrow number column + small gap, so titles get as much width as possible. */
 .pub {
-  display: grid; grid-template-columns: 42px 1fr; gap: 16px;
+  display: grid; grid-template-columns: 28px 1fr; gap: 10px;
   padding: 18px 0; border-bottom: 1px solid var(--rule);
 }
 .pub .idx {
   font-family: var(--serif); color: var(--ink-faint); font-size: .95rem;
   padding-top: 2px;
 }
-/* Slightly wider than .narrow so long paper titles fit in two lines */
-.pub-list { max-width: 940px; }
+/* Wide enough that the longest titles never take more than two lines, and the
+   Tie2 title (862px of text) fits on one. Usable text width works out as
+   980 - 48 (page padding) - 28 (number) - 10 (gap) = 894px. */
+.pub-list { max-width: 980px; }
 
 /* Normal wrapping: each line fills the full width before breaking, so every
    title lines up at the same right edge. (Do NOT use text-wrap: balance here —
@@ -262,6 +265,9 @@ section.block.tinted { background: var(--bg-soft); border-block: 1px solid var(-
   text-decoration-color: var(--accent);
 }
 .pub .authors { font-size: .92rem; color: var(--ink-soft); margin: 0 0 4px; }
+/* Author markers (* and #) — same size and height everywhere.
+   line-height:0 stops them from pushing the lines apart. */
+sup { font-size: .72em; line-height: 0; vertical-align: super; }
 .pub .authors .me { color: var(--ink); font-weight: 600; }
 .pub .venue { font-size: .92rem; color: var(--ink-soft); margin: 0; }
 /* Journal name — bold, dark, and underlined so it stands out in the citation */
