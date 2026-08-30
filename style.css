@@ -270,7 +270,12 @@ section.block.tinted {
   text-underline-offset: 3px; text-decoration-color: #d9c3b8; }
 .pub .venue a:hover em { text-decoration-color: var(--accent); }
 
-sup { font-size: .72em; line-height: 0; vertical-align: super; }
+/* Author markers (* and #). The asterisk is a small glyph in this serif, so it
+   is set a little larger than a normal superscript to stay legible. */
+sup { font-size: .85em; line-height: 0; vertical-align: super; }
+/* The marker straight after a lab member's name inherits the bold, so
+   "Jo G*" reads as one unit. */
+.pub .authors .me + sup { font-weight: 700; color: var(--ink); }
 
 .tag {
   display: inline-block; font-size: .62rem; letter-spacing: .12em;
