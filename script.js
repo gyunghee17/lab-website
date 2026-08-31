@@ -11,6 +11,32 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* ---- back to top ----
+     The button is created here, so no page needs its own copy of it.
+     It fades in once you have scrolled past 400px. Change that number to
+     make it appear sooner or later; the look is set in style.css (.to-top). */
+  var btnTop = document.createElement('button');
+  btnTop.type = 'button';
+  btnTop.className = 'to-top';
+  btnTop.setAttribute('aria-label', 'Back to top');
+  /* A chevron, drawn as a line rather than a text arrow so its thickness can
+     be set. Raise stroke-width for a heavier stroke. */
+  btnTop.innerHTML =
+    '<svg viewBox="0 0 24 24" width="19" height="19" fill="none" ' +
+    'stroke="currentColor" stroke-width="3.2" stroke-linecap="round" ' +
+    'stroke-linejoin="round" aria-hidden="true"><path d="M5 15.5 12 8.5l7 7"/></svg>';
+  document.body.appendChild(btnTop);
+
+  btnTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  function showTopButton() {
+    btnTop.classList.toggle('is-on', window.scrollY > 400);
+  }
+  showTopButton();
+  window.addEventListener('scroll', showTopButton, { passive: true });
+
   /* ---- tabs ----
      Each .tab-btn has data-tab="x"; the panel it shows is the element
      with id="x". The address bar keeps #x so the tab survives a reload
