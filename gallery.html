@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gallery — Jo Lab, Hanyang University</title>
-<meta name="description" content="Lab photos, structures, and events.">
+<meta name="description" content="EMDB and PDB structure depositions, and lab photos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -41,63 +41,296 @@
 <section class="page-banner">
   <div class="wrap">
     <p class="eyebrow">Gallery</p>
-    <h1>Life in the lab</h1>
-    <p>Structures, instruments, and the people behind them.</p>
+    <h1>Structures and life in the lab</h1>
   </div>
 </section>
 
 <!-- ======================================================
+     TABS
+     Clicking a button shows the panel whose id matches its data-tab value.
+     To add a tab: add a <button data-tab="xyz"> here and a
+     <div class="tab-panel" id="xyz"> below. The script does the rest.
+====================================================== -->
+<div class="tabs">
+  <div class="wrap">
+    <button class="tab-btn is-on" data-tab="structures">EMDB &amp; PDB</button>
+    <button class="tab-btn" data-tab="photos">Photos</button>
+  </div>
+</div>
+
+<!-- ===================== EMDB ===================== -->
+<section class="block tab-panel is-on" id="structures">
+  <div class="wrap">
+    <p style="text-align:center;color:var(--ink-soft);margin:-12px auto 34px;max-width:64ch;">
+      Structures deposited to the Electron Microscopy Data Bank and the Protein Data
+      Bank. Click any entry to open it at EMDB or RCSB PDB.
+    </p>
+    <!-- Some EMDB renders come on a black background. To use your own figure
+         instead, drop it in images/ as emd-XXXXX.jpg and change that card's
+         src from the ftp.ebi.ac.uk URL to "images/emd-XXXXX.jpg". -->
+    <div class="emd-grid">
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-46041" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-46041.jpg" alt="Cryo-EM structure of DA03E17 Fab in complex with influenza virus neuraminidase from A/California/07/2009 (H1N1)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-46041&nbsp;·&nbsp;PDB&nbsp;9CYE</span>
+          <span class="emd-res">2.7&nbsp;Å</span>
+        </div>
+        <p class="emd-title">DA03E17 Fab in complex with influenza virus neuraminidase from A/California/07/2009 (H1N1)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-46042" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-46042.jpg" alt="Cryo-EM structure of DA03E17 Fab in complex with influenza virus neuraminidase from A/Kansas/14/2017 (H3N2)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-46042&nbsp;·&nbsp;PDB&nbsp;9CYF</span>
+          <span class="emd-res">2.86&nbsp;Å</span>
+        </div>
+        <p class="emd-title">DA03E17 Fab in complex with influenza virus neuraminidase from A/Kansas/14/2017 (H3N2)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-46043" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-46043.jpg" alt="Cryo-EM structure of influenza virus neuraminidase from A/Kansas/14/2017 (H3N2)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-46043&nbsp;·&nbsp;PDB&nbsp;9CYG</span>
+          <span class="emd-res">2.75&nbsp;Å</span>
+        </div>
+        <p class="emd-title">Influenza virus neuraminidase from A/Kansas/14/2017 (H3N2)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-46044" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-46044.jpg" alt="Cryo-EM structure of DA03E17 Fab in complex with influenza virus neuraminidase from B/Colorado/06/2017" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-46044&nbsp;·&nbsp;PDB&nbsp;9CYH</span>
+          <span class="emd-res">2.47&nbsp;Å</span>
+        </div>
+        <p class="emd-title">DA03E17 Fab in complex with influenza virus neuraminidase from B/Colorado/06/2017</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-46045" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-46045.jpg" alt="Cryo-EM structure of 1G01 IgG in complex with influenza virus neuraminidase from A/Kansas/14/2017 (H3N2)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-46045&nbsp;·&nbsp;PDB&nbsp;9CYI</span>
+          <span class="emd-res">3.2&nbsp;Å</span>
+        </div>
+        <p class="emd-title">1G01 IgG in complex with influenza virus neuraminidase from A/Kansas/14/2017 (H3N2)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-46046" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-46046.jpg" alt="Cryo-EM structure of FNI9 IgG in complex with influenza virus neuraminidase from A/Kansas/14/2017 (H3N2)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-46046&nbsp;·&nbsp;PDB&nbsp;9CYJ</span>
+          <span class="emd-res">2.97&nbsp;Å</span>
+        </div>
+        <p class="emd-title">FNI9 IgG in complex with influenza virus neuraminidase from A/Kansas/14/2017 (H3N2)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-70108" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-70108.jpg" alt="Cryo-EM structure of CR12042 Fab in complex with influenza virus neuraminidase from A/California/07/2009 (H1N1)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-70108&nbsp;·&nbsp;PDB&nbsp;9O4N</span>
+          <span class="emd-res">2.48&nbsp;Å</span>
+        </div>
+        <p class="emd-title">CR12042 Fab in complex with influenza virus neuraminidase from A/California/07/2009 (H1N1)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-70109" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-70109.jpg" alt="Cryo-EM structure of CR12044 Fab in complex with influenza virus neuraminidase from A/California/07/2009 (H1N1)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-70109&nbsp;·&nbsp;PDB&nbsp;9O4O</span>
+          <span class="emd-res">2.53&nbsp;Å</span>
+        </div>
+        <p class="emd-title">CR12044 Fab in complex with influenza virus neuraminidase from A/California/07/2009 (H1N1)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-70110" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-70110.jpg" alt="Cryo-EM structure of AF9C-GL Fab in complex with influenza virus neuraminidase from A/California/07/2009 (H1N1)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-70110&nbsp;·&nbsp;PDB&nbsp;9O4P</span>
+          <span class="emd-res">2.55&nbsp;Å</span>
+        </div>
+        <p class="emd-title">AF9C-GL Fab in complex with influenza virus neuraminidase from A/California/07/2009 (H1N1)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-70111" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-70111.jpg" alt="Cryo-EM structure of Z1A11-GL Fab in complex with influenza virus neuraminidase from A/California/07/2009 (H1N1)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-70111&nbsp;·&nbsp;PDB&nbsp;9O4Q</span>
+          <span class="emd-res">2.76&nbsp;Å</span>
+        </div>
+        <p class="emd-title">Z1A11-GL Fab in complex with influenza virus neuraminidase from A/California/07/2009 (H1N1)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-70233" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-70233.jpg" alt="Cryo-EM structure of NI06063_d30_103 Fab in complex with influenza virus hemagglutinin from A/Hong Kong/485197/2014 (H3N2)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-70233&nbsp;·&nbsp;PDB&nbsp;9O8Q</span>
+          <span class="emd-res">2.62&nbsp;Å</span>
+        </div>
+        <p class="emd-title">NI06063_d30_103 Fab in complex with influenza virus hemagglutinin from A/Hong Kong/485197/2014 (H3N2)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-70234" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-70234.jpg" alt="Cryo-EM structure of NI06063_d30_103 Fab in complex with influenza virus hemagglutinin from A/Michigan/45/2015 (H1N1)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-70234&nbsp;·&nbsp;PDB&nbsp;9O8R</span>
+          <span class="emd-res">2.96&nbsp;Å</span>
+        </div>
+        <p class="emd-title">NI06063_d30_103 Fab in complex with influenza virus hemagglutinin from A/Michigan/45/2015 (H1N1)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-70235" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-70235.jpg" alt="Cryo-EM structure of NI04359_d30_240 Fab in complex with influenza virus hemagglutinin from A/Hong Kong/485197/2014 (H3N2)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-70235&nbsp;·&nbsp;PDB&nbsp;9O8S</span>
+          <span class="emd-res">2.65&nbsp;Å</span>
+        </div>
+        <p class="emd-title">NI04359_d30_240 Fab in complex with influenza virus hemagglutinin from A/Hong Kong/485197/2014 (H3N2)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-70236" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-70236.jpg" alt="Cryo-EM structure of NI04359_d30_240 Fab in complex with influenza virus hemagglutinin from A/Michigan/45/2015 (H1N1)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-70236&nbsp;·&nbsp;PDB&nbsp;9O8T</span>
+          <span class="emd-res">3.12&nbsp;Å</span>
+        </div>
+        <p class="emd-title">NI04359_d30_240 Fab in complex with influenza virus hemagglutinin from A/Michigan/45/2015 (H1N1)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-71602" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-71602.jpg" alt="Cryo-EM structure of VX77 Fab in complex with GII.4 Norovirus P domain" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-71602&nbsp;·&nbsp;PDB&nbsp;9PFJ</span>
+          <span class="emd-res">3.08&nbsp;Å</span>
+        </div>
+        <p class="emd-title">VX77 Fab in complex with GII.4 Norovirus P domain</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-71603" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-71603.jpg" alt="Cryo-EM structure of VX93 Fab in complex with GII.4 Norovirus P domain" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-71603&nbsp;·&nbsp;PDB&nbsp;9PFK</span>
+          <span class="emd-res">2.93&nbsp;Å</span>
+        </div>
+        <p class="emd-title">VX93 Fab in complex with GII.4 Norovirus P domain</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-72540" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-72540.jpg" alt="Cryo-EM map of norovirus GII.4 SY 2012 VLP in complex with VX77 Fab" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-72540</span>
+          <span class="emd-res">3.43&nbsp;Å</span>
+        </div>
+        <p class="emd-title">Norovirus GII.4 SY 2012 VLP in complex with VX77 Fab</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-72541" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-72541.jpg" alt="Cryo-EM map of norovirus GII.4 SY 2012 VLP in complex with VX93 Fab" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-72541</span>
+          <span class="emd-res">3.34&nbsp;Å</span>
+        </div>
+        <p class="emd-title">Norovirus GII.4 SY 2012 VLP in complex with VX93 Fab</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-72542" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-72542.jpg" alt="Cryo-EM map of norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - fivefold axis local map (4 Fabs)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-72542</span>
+          <span class="emd-res">6.97&nbsp;Å</span>
+        </div>
+        <p class="emd-title">Norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - fivefold axis local map (4 Fabs)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-72543" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-72543.jpg" alt="Cryo-EM map of norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - fivefold axis local map (5 Fabs-1)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-72543</span>
+          <span class="emd-res">6.5&nbsp;Å</span>
+        </div>
+        <p class="emd-title">Norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - fivefold axis local map (5 Fabs-1)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-72544" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-72544.jpg" alt="Cryo-EM map of norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - fivefold axis local map (5 Fabs-2)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-72544</span>
+          <span class="emd-res">7.53&nbsp;Å</span>
+        </div>
+        <p class="emd-title">Norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - fivefold axis local map (5 Fabs-2)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-72545" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-72545.jpg" alt="Cryo-EM map of norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - fivefold axis local map (3 Fabs-1)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-72545</span>
+          <span class="emd-res">7.42&nbsp;Å</span>
+        </div>
+        <p class="emd-title">Norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - fivefold axis local map (3 Fabs-1)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-72546" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-72546.jpg" alt="Cryo-EM map of norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - fivefold axis local map (3 Fabs-2)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-72546</span>
+          <span class="emd-res">6.66&nbsp;Å</span>
+        </div>
+        <p class="emd-title">Norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - fivefold axis local map (3 Fabs-2)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-72547" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-72547.jpg" alt="Cryo-EM map of norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - threefold axis local map (1 Fab)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-72547</span>
+          <span class="emd-res">7.68&nbsp;Å</span>
+        </div>
+        <p class="emd-title">Norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - threefold axis local map (1 Fab)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-72548" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-72548.jpg" alt="Cryo-EM map of norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - threefold axis local map (2 Fabs-1)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-72548</span>
+          <span class="emd-res">7.39&nbsp;Å</span>
+        </div>
+        <p class="emd-title">Norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - threefold axis local map (2 Fabs-1)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-72549" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-72549.jpg" alt="Cryo-EM map of norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - threefold axis local map (2 Fabs-2)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-72549</span>
+          <span class="emd-res">7.46&nbsp;Å</span>
+        </div>
+        <p class="emd-title">Norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - threefold axis local map (2 Fabs-2)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-72550" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-72550.jpg" alt="Cryo-EM map of norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - threefold axis local map (2 Fabs-3)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-72550</span>
+          <span class="emd-res">6.59&nbsp;Å</span>
+        </div>
+        <p class="emd-title">Norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - threefold axis local map (2 Fabs-3)</p>
+      </a>
+      <a class="emd" href="https://www.ebi.ac.uk/emdb/EMD-72551" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/emd-72551.jpg" alt="Cryo-EM map of norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - threefold axis local map (3 Fabs)" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">EMD-72551</span>
+          <span class="emd-res">6.65&nbsp;Å</span>
+        </div>
+        <p class="emd-title">Norovirus GII.4 SY 2012 VLP in complex with VX93 Fab - threefold axis local map (3 Fabs)</p>
+      </a>
+          <a class="emd" href="https://www.rcsb.org/structure/7E72" target="_blank" rel="noopener">
+        <div class="emd-fig"><img src="images/pdb-7e72.jpg" alt="Crystal structure of Tie2-agonistic antibody in complex with human Tie2 Fn2-3" loading="lazy"></div>
+        <div class="emd-meta">
+          <span class="emd-id">PDB&nbsp;7E72</span>
+          <span class="emd-res">2.09&nbsp;Å</span>
+        </div>
+        <p class="emd-title">Tie2-agonistic antibody in complex with human Tie2 Fn2-3<br><span class="emd-tagline">X-ray diffraction</span></p>
+      </a>
+</div>
+  </div>
+</section>
+
+<!-- ===================== PHOTOS =====================
      HOW TO ADD A PHOTO
      1. Put the image file in the "images" folder.
      2. Copy one entire <figure class="photo"> ... </figure> block.
-     3. Replace the placeholder <div class="frame"> content with:
-           <div class="frame"><img src="images/yourfile.jpg" alt="short description"></div>
+     3. Replace the placeholder text inside <div class="frame"> with:
+           <img src="images/yourfile.jpg" alt="short description">
      4. Edit the caption.
-     Tip: resize photos to about 1600 px wide before uploading so pages load fast.
-====================================================== -->
-
-<section class="block">
+     Resize photos to about 1600 px wide before uploading so pages load fast.
+================================================================== -->
+<section class="block tab-panel" id="photos">
   <div class="wrap">
-    <h2 style="margin-bottom:28px;">Science</h2>
     <div class="gallery-grid">
 
       <figure class="photo">
         <div class="frame">images/gallery1.jpg</div>
-        <figcaption><span class="todo">[Cryo-EM map of ... at X Å resolution]</span></figcaption>
+        <figcaption>Lab opening, September 2026</figcaption>
       </figure>
 
       <figure class="photo">
         <div class="frame">images/gallery2.jpg</div>
-        <figcaption><span class="todo">[Micrograph / 2D class averages]</span></figcaption>
+        <figcaption>Sample preparation</figcaption>
       </figure>
 
       <figure class="photo">
         <div class="frame">images/gallery3.jpg</div>
-        <figcaption><span class="todo">[Model figure or predicted structure]</span></figcaption>
-      </figure>
-
-    </div>
-  </div>
-</section>
-
-<section class="block tinted">
-  <div class="wrap">
-    <h2 style="margin-bottom:28px;">People &amp; events</h2>
-    <div class="gallery-grid">
-
-      <figure class="photo">
-        <div class="frame">images/gallery4.jpg</div>
-        <figcaption><span class="todo">[Lab opening, September 2026]</span></figcaption>
-      </figure>
-
-      <figure class="photo">
-        <div class="frame">images/gallery5.jpg</div>
-        <figcaption><span class="todo">[Conference / retreat]</span></figcaption>
-      </figure>
-
-      <figure class="photo">
-        <div class="frame">images/gallery6.jpg</div>
-        <figcaption><span class="todo">[Group dinner]</span></figcaption>
+        <figcaption>Conference / retreat</figcaption>
       </figure>
 
     </div>
