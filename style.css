@@ -118,7 +118,7 @@ nav.main-nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
    Hero & page banners — centred
    ============================================================ */
 .hero {
-  padding: 78px 0 66px; text-align: center;
+  padding: 72px 0 52px; text-align: center;
   border-bottom: 1px solid var(--rule);
   background: radial-gradient(760px 320px at 50% -20%, var(--accent-soft), transparent 70%);
 }
@@ -143,7 +143,7 @@ nav.main-nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
 .btn-ghost { background: transparent; color: var(--accent); }
 
 .page-banner {
-  padding: 62px 0 44px; border-bottom: 1px solid var(--rule);
+  padding: 54px 0 38px; border-bottom: 1px solid var(--rule);
   background: var(--bg-soft); text-align: center;
 }
 .page-banner .eyebrow { color: var(--accent); }
@@ -153,9 +153,14 @@ nav.main-nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
 /* ============================================================
    Sections
    ============================================================ */
-section.block { padding: 68px 0; }
+section.block { padding: 50px 0; }
 section.block.tinted { background: var(--bg-soft); border-block: 1px solid var(--rule); }
-.section-head { margin-bottom: 38px; text-align: center; }
+/* Two plain sections in a row would otherwise stack 50px + 50px of empty
+   space between them. Tinted sections keep the full padding, since their
+   background needs the room. */
+.hero + section.block:not(.tinted),
+section.block + section.block:not(.tinted) { padding-top: 32px; }
+.section-head { margin-bottom: 30px; text-align: center; }
 .section-head .eyebrow { color: var(--ink-faint); }
 .section-head--left { text-align: left; }
 
@@ -343,9 +348,9 @@ sup { font-size: .85em; line-height: 0; vertical-align: super; }
 
 /* Intro line above a tab panel. Each <span> is one sentence on its own line;
    below 720px they fall back to normal wrapping. */
-.panel-note { text-align: center; color: var(--ink-soft); margin: 0 auto 30px; max-width: 690px; }
+.panel-note { text-align: center; color: var(--ink-soft); margin: 0 auto 30px; max-width: 770px; }
 .panel-note span { display: block; }
-@media (max-width: 720px) { .panel-note span { display: inline; } }
+@media (max-width: 820px) { .panel-note span { display: inline; } }
 
 /* A single photo on its own: centred, and shown whole rather than cropped.
    Delete the photo--solo class from the <figure> once there are several. */
@@ -371,7 +376,7 @@ sup { font-size: .85em; line-height: 0; vertical-align: super; }
 .tab-panel.is-on { display: block; }
 /* A panel sits right under the tab bar, so it needs less room on top
    than a normal section. */
-section.block.tab-panel { padding-top: 32px; }
+section.block.tab-panel { padding-top: 26px; }
 
 /* ============================================================
    EMDB depositions — five per row
