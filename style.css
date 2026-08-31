@@ -169,6 +169,12 @@ section.block.tinted { padding: 40px 0; background: var(--bg-soft); border-block
 .hero + section.block:not(.tinted),
 .page-banner + section.block:not(.tinted),
 section.block + section.block:not(.tinted) { padding-top: 30px; }
+/* Two plain white sections in a row have nothing between them, so a hairline
+   marks the boundary. Not needed after a tinted section — its own border and
+   background already do that. */
+section.block:not(.tinted) + section.block:not(.tinted):not(.tab-panel) {
+  border-top: 1px solid var(--rule);
+}
 /* A plain section running straight into a tinted one would otherwise leave
    50px + 40px of gap; the tinted background already separates them. */
 section.block:not(.tinted):has(+ section.block.tinted) { padding-bottom: 28px; }
@@ -222,11 +228,12 @@ section.block:not(.tinted):has(+ section.block.tinted) { padding-bottom: 28px; }
 }
 .pubcard:hover { border-color: #c9d2dd; transform: translateY(-2px); text-decoration: none; }
 .pubcard .fig { aspect-ratio: 1 / 1; background: #fff; border-bottom: 1px solid var(--rule); }
-.pubcard .fig img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
+.pubcard .fig img { width: 100%; height: 100%; object-fit: contain; }
 .pubcard .body { padding: 16px 18px 20px; }
 .pubcard .venue {
   font-family: var(--mono); font-size: .7rem; letter-spacing: .04em;
   color: var(--accent); margin: 0 0 8px; text-transform: uppercase;
+  line-height: 1.45;
 }
 .pubcard h3 { font-size: .98rem; font-weight: 500; line-height: 1.34; margin: 0; }
 
@@ -520,6 +527,8 @@ section.block.tab-panel { padding-top: 26px; }
 .to-top:hover { background: #16406f; }
 @media (max-width: 560px) { .to-top { right: 14px; bottom: 14px; } }
 @media (prefers-reduced-motion: reduce) { .to-top { transition: none; } }
+
+.centered { text-align: center; }
 
 .callout {
   border: 1px solid var(--accent); border-left-width: 4px;
