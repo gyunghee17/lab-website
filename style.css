@@ -339,6 +339,10 @@ sup { font-size: .85em; line-height: 0; vertical-align: super; }
 @media (max-width: 760px) {
   .pub-thumb { grid-template-columns: 28px 1fr; }
   .pub-thumb .thumb { grid-column: 2; margin-bottom: 14px; max-width: 240px; }
+  /* The figure is pinned to column 2, so the citation that follows it must be
+     pinned there too — otherwise it is auto-placed into the 28px number
+     column and every line ends up one word wide. */
+  .pub-thumb > div:last-child { grid-column: 2; }
 }
 
 /* ============================================================
