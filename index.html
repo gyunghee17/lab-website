@@ -7,7 +7,7 @@
 <meta name="description" content="Structural biology laboratory at the Department of Life Science, Hanyang University. Cryo-EM and computational structure prediction.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,8 +17,11 @@
   <div class="wrap">
     <div class="brand">
       <a href="index.html">
-        <span class="brand-name">Jo Lab</span>
-        <span class="brand-sub">Hanyang University</span>
+        <img class="brand-logo" src="images/hanyang-logo.png" alt="Hanyang University">
+        <span class="brand-text">
+          <span class="brand-name">Jo Lab</span>
+          <span class="brand-sub">at Hanyang University</span>
+        </span>
       </a>
     </div>
     <button class="nav-toggle" aria-expanded="false" aria-label="Menu">Menu</button>
@@ -55,22 +58,54 @@
 </section>
 
 <!-- ======================================================
-     FEATURE FIGURE
-     One large structure figure, right under the headline. To swap it,
-     put a new file in images/ and change the src below.
+     SELECTED PUBLICATIONS — the four structure figures in a row.
+     Each card is a link straight to the paper. To swap one out, change the
+     image, the journal line and the short title below.
 ====================================================== -->
-<section class="figure-band">
-  <div class="inner">
-    <figure style="margin:0">
-      <img src="images/pub1.jpg" alt="Cryo-EM reconstruction of a norovirus virus-like particle">
-      <div class="caption">Norovirus VLP · coloured by local resolution</div>
-    </figure>
-    <div>
-      <h2>Antibodies are the most direct readout we have of how the immune system sees a
-      pathogen.</h2>
-      <p style="color:var(--ink-soft);margin-bottom:0;">Cryo-EM lets us look at that
-      recognition directly — one antibody at a time, or a whole serum repertoire at once.</p>
+<section class="block">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Selected publications</p>
+      <h2>Recent work</h2>
     </div>
+    <div class="pubcards">
+
+      <a class="pubcard" href="https://doi.org/10.1073/pnas.2603905123" target="_blank" rel="noopener">
+        <div class="fig"><img src="images/pub1.jpg" alt="Cryo-EM reconstruction of a norovirus virus-like particle"></div>
+        <div class="body">
+          <p class="venue">PNAS · 2026</p>
+          <h3>Serum IgA repertoires against human norovirus</h3>
+        </div>
+      </a>
+
+      <a class="pubcard" href="https://doi.org/10.1038/s41586-026-10248-6" target="_blank" rel="noopener">
+        <div class="fig"><img src="images/pub2.jpg" alt="Antibodies bound to the influenza haemagglutinin stalk"></div>
+        <div class="body">
+          <p class="venue">Nature · 2026</p>
+          <h3>B cell imprinting in children impairs antibodies to the haemagglutinin stalk</h3>
+        </div>
+      </a>
+
+      <a class="pubcard" href="https://doi.org/10.1038/s41467-025-62174-2" target="_blank" rel="noopener">
+        <div class="fig"><img src="images/pub3.jpg" alt="Antibody bound to influenza neuraminidase"></div>
+        <div class="body">
+          <p class="venue">Nat. Commun. · 2025</p>
+          <h3>Broadly protective antibodies targeting the neuraminidase active site</h3>
+        </div>
+      </a>
+
+      <a class="pubcard" href="https://doi.org/10.1038/s41467-021-26620-1" target="_blank" rel="noopener">
+        <div class="fig"><img src="images/pub4.jpg" alt="Hexagonal assembly of Tie2 dimers clustered by an agonistic antibody"></div>
+        <div class="body">
+          <p class="venue">Nat. Commun. · 2021</p>
+          <h3>Clustering and activation of the Tie2 receptor by an agonistic antibody</h3>
+        </div>
+      </a>
+
+    </div>
+    <p style="text-align:center;margin:38px 0 0;">
+      <a href="publications.html">All publications →</a>
+    </p>
   </div>
 </section>
 
@@ -134,7 +169,7 @@
 
 <!-- ===================== NEWS ===================== -->
 <section class="block">
-  <div class="wrap narrow">
+  <div class="wrap news-wrap">
     <div class="section-head">
       <p class="eyebrow">News</p>
       <h2>Latest from the lab</h2>
@@ -142,27 +177,11 @@
     <ul class="news">
       <li>
         <span class="date">2026.09</span>
-        <p>The lab officially opens at the Department of Life Science, Hanyang University.
-        <strong>We are recruiting graduate students and undergraduate interns.</strong>
-        <a href="contact.html">Get in touch →</a></p>
-      </li>
-      <li>
-        <span class="date">2026</span>
-        <p>Our work on serum IgA repertoires against human norovirus is published in
-        <em>PNAS</em>.
-        <a href="publications.html">See publications →</a></p>
-      </li>
-      <li>
-        <span class="date">2026</span>
-        <p>“B cell imprinting in children impairs antibodies to the haemagglutinin
-        stalk” is published in <em>Nature</em>.
-        <a href="https://doi.org/10.1038/s41586-026-10248-6" target="_blank" rel="noopener">Read the paper →</a></p>
-      </li>
-      <li>
-        <span class="date">2025</span>
-        <p>Our study of neuraminidase active-site antibodies is published in
-        <em>Nature Communications</em> and selected as an Editors' Highlight.
-        <a href="https://doi.org/10.1038/s41467-025-62174-2" target="_blank" rel="noopener">Read the paper →</a></p>
+        <!-- Each sentence gets its own line (<br>). The news column is wide
+             enough that neither sentence wraps. -->
+        <p>The lab officially opens at the Department of Life Science, Hanyang University.<br>
+        We are recruiting graduate students and undergraduate interns.<br>
+        <a href="contact.html">Get&nbsp;in&nbsp;touch&nbsp;→</a></p>
       </li>
     </ul>
   </div>
@@ -184,7 +203,10 @@
 <!-- ===================== FOOTER (identical on every page) ===================== -->
 <footer class="site-footer">
   <div class="wrap">
-    <p>© 2026 Jo Lab · Department of Life Science, Hanyang University</p>
+    <div class="footer-brand">
+      <img src="images/hanyang-logo.png" alt="">
+      <p>© 2026 Jo Lab · Department of Life Science, Hanyang University</p>
+    </div>
     <div class="footer-links">
       <a href="research.html">Research</a>
       <a href="publications.html">Publications</a>
