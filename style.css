@@ -278,8 +278,9 @@ section.block.tinted { background: var(--bg-soft); border-block: 1px solid var(-
 /* Author markers (* and #). The asterisk is small, so it is set a little
    larger than a normal superscript to stay legible. */
 sup { font-size: .85em; line-height: 0; vertical-align: super; }
-/* The marker straight after a lab member's name inherits the bold. */
-.pub .authors .me + sup { font-weight: 700; color: var(--ink); }
+/* A marker belonging to a lab member sits INSIDE .me, so it inherits the bold
+   automatically. (Do not use ".me + sup" here — the adjacent-sibling selector
+   skips over plain text, so it would also catch a far-away author's #.) */
 
 .tag {
   display: inline-block; font-size: .64rem; letter-spacing: .08em;
