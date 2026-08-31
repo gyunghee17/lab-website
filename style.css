@@ -119,9 +119,11 @@ nav.main-nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
    Hero & page banners — centred
    ============================================================ */
 .hero {
-  padding: 72px 0 52px; text-align: center;
+  padding: 36px 0 34px; text-align: center;
   border-bottom: 1px solid var(--rule);
-  background: radial-gradient(760px 320px at 50% -20%, var(--accent-soft), transparent 70%);
+  /* The blue wash behind the headline. Raise or lower the .17 for more or
+     less colour; it is the only tinted area on the home page. */
+  background: radial-gradient(880px 400px at 50% -14%, rgba(26,77,143,.17), transparent 72%);
 }
 .eyebrow {
   font-size: .72rem; letter-spacing: .1em; text-transform: uppercase;
@@ -130,7 +132,10 @@ nav.main-nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
 .hero .eyebrow { color: var(--accent); }
 .hero h1 { max-width: 17ch; margin-left: auto; margin-right: auto; margin-bottom: .4em; }
 .hero .lede {
-  font-size: 1.1rem; color: var(--ink-soft); max-width: 60ch; margin: 0 auto;
+  font-size: 1.1rem; color: var(--ink-soft); margin: 0 auto;
+  /* 620px is the width at which the lines come out most even. The first
+     sentence ends with a <br> in index.html. */
+  max-width: 620px;
 }
 .hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 
@@ -516,6 +521,9 @@ section.block.tab-panel { padding-top: 26px; }
 .callout p:last-child { margin-bottom: 0; }
 
 /* Placeholder marker — delete these once real content is in */
+/* Grey, unobtrusive — for a value that is simply not available yet. */
+.pending { color: var(--ink-faint); }
+
 .todo {
   background: #fff6d9; border-left: 3px solid #e0a800;
   padding: 3px 8px; border-radius: 3px; font-size: .93em;
