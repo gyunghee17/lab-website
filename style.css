@@ -234,10 +234,15 @@ section.block.tinted { background: var(--bg-soft); border-block: 1px solid var(-
 
 /* Timeline */
 .timeline { list-style: none; margin: 0; padding: 0; }
+/* Year column is sized to "2022.10 – 2026.08", which measures 135px. */
 .timeline li {
-  display: grid; grid-template-columns: 152px 1fr; gap: 20px;
+  display: grid; grid-template-columns: 140px 1fr; gap: 16px;
   padding: 15px 0; border-bottom: 1px solid var(--rule);
 }
+/* Use class="timeline timeline--short" for lists whose years are just "2026".
+   The narrower column gives the text 666px instead of 558px, which is enough
+   for the longest society name to stay on one line. */
+.timeline--short li { grid-template-columns: 52px 1fr; gap: 12px; }
 .timeline li:last-child { border-bottom: none; }
 .timeline .year { font-size: .78rem; color: var(--ink-faint); white-space: nowrap; padding-top: 5px; }
 .timeline .what strong { display: block; font-weight: 600; }
