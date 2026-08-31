@@ -337,6 +337,23 @@ sup { font-size: .85em; line-height: 0; vertical-align: super; }
 .figure-wide .frame { aspect-ratio: 16 / 9; }
 .figure-wide figcaption { text-align: center; }
 
+/* Keeps a phrase on one line, so names like Tie2-Fn2-3 or (5 Fabs-1) are never
+   split across two lines. Wrap any text in <span class="nb">…</span>. */
+.nb { white-space: nowrap; }
+
+/* Intro line above a tab panel. Each <span> is one sentence on its own line;
+   below 720px they fall back to normal wrapping. */
+.panel-note { text-align: center; color: var(--ink-soft); margin: 0 auto 30px; max-width: 690px; }
+.panel-note span { display: block; }
+@media (max-width: 720px) { .panel-note span { display: inline; } }
+
+/* A single photo on its own: centred, and shown whole rather than cropped.
+   Delete the photo--solo class from the <figure> once there are several. */
+.gallery-grid > .photo--solo:only-child { grid-column: 1 / -1; max-width: 520px; margin: 0 auto; }
+.photo--solo .frame { aspect-ratio: auto; padding: 0; }
+.photo--solo .frame img { height: auto; object-fit: contain; }
+.photo--solo figcaption { text-align: center; }
+
 /* ============================================================
    Tabs (Gallery)
    ============================================================ */
@@ -352,6 +369,9 @@ sup { font-size: .85em; line-height: 0; vertical-align: super; }
 .tab-btn.is-on { color: var(--ink); border-bottom-color: var(--accent); }
 .tab-panel { display: none; }
 .tab-panel.is-on { display: block; }
+/* A panel sits right under the tab bar, so it needs less room on top
+   than a normal section. */
+section.block.tab-panel { padding-top: 32px; }
 
 /* ============================================================
    EMDB depositions — five per row
