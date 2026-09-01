@@ -41,6 +41,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 img { max-width: 100%; display: block; }
+/* Browsers indent <figure> by 40px on each side by default, which eats a
+   quarter of the width on a phone. */
+figure { margin: 0; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
@@ -395,6 +398,20 @@ section.block:has(> .wrap > .figure-wide:first-child) { padding-top: 16px; }
 .figure-plain .frame { aspect-ratio: auto; padding: 0; }
 .figure-plain .frame img { height: auto; object-fit: contain; }
 .figure-plain figcaption { text-align: center; }
+
+/* Phones: these two figures break out of the page's side padding, so the
+   picture gets the full screen width instead of two thirds of it. */
+@media (max-width: 620px) {
+  .figure-wide, .figure-plain { margin-left: -24px; margin-right: -24px; }
+  .figure-wide, .figure-plain,
+  .figure-wide .frame, .figure-plain .frame {
+    border-radius: 0; border-left: 0; border-right: 0;
+  }
+  .figure-wide figcaption, .figure-plain figcaption { padding-left: 24px; padding-right: 24px; }
+}
+/* The "view full size" hint is only useful where the picture is small. */
+.zoom-hint { display: none; }
+@media (max-width: 760px) { .zoom-hint { display: block; } }
 
 /* Keeps a phrase on one line, so names like Tie2-Fn2-3 or (5 Fabs-1) are never
    split across two lines. Wrap any text in <span class="nb">…</span>. */
