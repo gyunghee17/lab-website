@@ -67,6 +67,10 @@ p  { margin: 0 0 .95em; }
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 .narrow { max-width: 760px; }
 
+/* Emphasis inside running text. 600 rather than the browser's 700, so a bold
+   phrase stands out without looking heavier than the headings around it. */
+.narrow p strong, .hero .lede strong { font-weight: 600; color: var(--ink); }
+
 /* ============================================================
    Header / Navigation
    ============================================================ */
@@ -181,6 +185,8 @@ section.block:not(.tinted):has(+ section.block.tinted) { padding-bottom: 28px; }
 .section-head { margin-bottom: 30px; text-align: center; }
 .section-head .eyebrow { color: var(--ink-faint); }
 .section-head--left { text-align: left; }
+/* A list needs less room under its heading than a block of prose or a grid. */
+.section-head:has(+ .interests) { margin-bottom: 18px; }
 
 /* ============================================================
    Grids & cards
@@ -350,11 +356,13 @@ sup { font-size: .85em; line-height: 0; vertical-align: super; }
    ============================================================ */
 .interests { list-style: none; margin: 0; padding: 0; }
 .interests li {
-  position: relative; padding: 14px 0 14px 26px; border-bottom: 1px solid var(--rule);
+  position: relative; padding: 7px 0 7px 26px; border-bottom: 1px solid var(--rule);
+  color: var(--ink-soft);
 }
 .interests li:last-child { border-bottom: none; }
+.interests strong { font-weight: 600; color: var(--ink); }
 .interests li::before {
-  content: ""; position: absolute; left: 2px; top: 26px;
+  content: ""; position: absolute; left: 2px; top: 20px;
   width: 10px; height: 2px; background: var(--accent);
 }
 
@@ -375,8 +383,18 @@ sup { font-size: .85em; line-height: 0; vertical-align: super; }
   padding: 13px 16px; font-size: .78rem; color: var(--ink-soft);
   border-top: 1px solid var(--rule);
 }
+/* A wide figure is cropped to 16:9 from the centre. Change the ratio here if
+   a picture should be shown at its own shape instead. */
 .figure-wide .frame { aspect-ratio: 16 / 9; }
+/* A picture needs less room above it than a heading does, so a section that
+   opens with one sits closer to the banner. */
+section.block:has(> .wrap > .figure-wide:first-child) { padding-top: 16px; }
 .figure-wide figcaption { text-align: center; }
+/* A diagram must never be cropped, so this variant keeps the picture's own
+   shape and fits it inside the frame. */
+.figure-plain .frame { aspect-ratio: auto; padding: 0; }
+.figure-plain .frame img { height: auto; object-fit: contain; }
+.figure-plain figcaption { text-align: center; }
 
 /* Keeps a phrase on one line, so names like Tie2-Fn2-3 or (5 Fabs-1) are never
    split across two lines. Wrap any text in <span class="nb">…</span>. */
@@ -533,6 +551,21 @@ section.block.tab-panel { padding-top: 26px; }
 @media (prefers-reduced-motion: reduce) { .to-top { transition: none; } }
 
 .centered { text-align: center; }
+
+/* A line break that only applies on wide screens. Below 760px the sentence
+   before it no longer fits on one line, so the break is dropped and the text
+   flows normally instead of leaving a stubby line. */
+@media (max-width: 760px) { br.br-wide { display: none; } }
+
+/* Small reference note under a paragraph. The <sup> marker in the body text
+   links down to it. */
+.footnote {
+  font-size: .8rem; line-height: 1.5; color: var(--ink-faint);
+  margin: 4px 0 0; scroll-margin-top: 96px;
+}
+.footnote:first-of-type { margin-top: 22px; }
+.footnote a { color: var(--ink-soft); text-decoration: underline; text-underline-offset: 2px; }
+.footnote a:hover { color: var(--accent); }
 
 .callout {
   border: 1px solid var(--accent); border-left-width: 4px;

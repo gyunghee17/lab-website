@@ -48,70 +48,57 @@
 </section>
 
 <!-- ======================================================
-     MAIN FIGURE
-     Put your structure figure in the images folder, then replace the
-     placeholder <div class="frame"> below with:
-        <div class="frame"><img src="images/research1.jpg" alt="short description"></div>
-     A wide figure (roughly 16:9) works best here.
-     If you would rather show two figures side by side, delete this block and
-     use the "TWO FIGURES" block further down instead.
+     INTRO
+     To change the picture, drop a new file in the images folder and edit the
+     <img src> below. The frame crops to 16:9 from the centre, so a wide image
+     works best.
 ====================================================== -->
 <section class="block">
   <div class="wrap">
 
     <figure class="photo figure-wide">
       <div class="frame">
-        Figure placeholder<br>images/research1.jpg
+        <img src="images/research1.jpg" alt="Atomic model built into a 2.1 A cryo-EM density map, with individual amino acid side chains resolved">
       </div>
-      <figcaption><span class="todo">[Caption — e.g. Cryo-EM structure of a broadly
-      neutralizing antibody bound to influenza neuraminidase.]</span></figcaption>
+      <figcaption>Atomic model built into cryo-EM density at
+      2.1&nbsp;Å overall resolution, with individual side chains resolved.</figcaption>
     </figure>
 
-    <div class="narrow" style="margin: 52px auto 0;">
+    <div class="narrow" style="margin: 44px auto 0;">
       <p>Antibodies are the most direct readout we have of how the immune system sees a
-      pathogen. Our lab uses single-particle cryo-electron microscopy — including
-      polyclonal epitope mapping (cryo-EMPEM), which resolves an entire serum antibody
-      repertoire rather than one antibody at a time — to determine how human antibodies
-      engage viral antigens, why a few of those interactions protect broadly across
-      strains, and how early exposure imprints and constrains the repertoire that
-      follows. We pair this with AI-based protein design to build immunogens that focus
-      the response on the epitopes that matter, then test those designs structurally and
-      functionally. The aim is to turn descriptions of immune recognition into design
-      rules for universal vaccines and therapeutic antibodies.</p>
+      pathogen.<br class="br-wide">
+      Our lab uses single-particle <strong>cryo-electron microscopy (cryo-EM)</strong> to determine how human antibodies engage the surface antigens of influenza, norovirus
+      and bunyaviruses such as hantaviruses and&nbsp;SFTSV, why a few of those interactions protect
+      broadly across strains, often through molecular features that recur across
+      different individuals<sup><a href="#ref1">1</a></sup>, and how early exposure imprints and constrains the
+      repertoire that follows<sup><a href="#ref2">2,3</a></sup>.</p>
+
+      <p>We pair this with <strong>AI-based protein design</strong>, building immunogens
+      that focus the response on conserved, protective epitopes, and testing them in
+      animal models. The elicited antibody response is then analysed structurally, this
+      time at the polyclonal level rather than one antibody at a time, using
+      electron-microscopy-based polyclonal epitope mapping
+      (cryo-EMPEM)<sup><a href="#ref4">4,5</a></sup>. The resulting epitope landscape
+      defines the specificities an immunogen elicited and guides the next round of
+      design, with the aim of accelerating the vaccine development cycle.</p>
+
+      <!-- Reference notes. To add one, append a <p class="footnote" id="refN">
+           line here and put a matching <sup><a href="#refN">N</a></sup> in the
+           text above. -->
+      <p class="footnote" id="ref1"><sup>1</sup> Jo G <em>et al.</em> <a href="https://doi.org/10.1038/s41467-025-62174-2" target="_blank" rel="noopener"><em>Nature Communications</em> 16, 7067 (2025)</a></p>
+      <p class="footnote" id="ref2"><sup>2</sup> Sun J, Jo G <em>et al.</em> <a href="https://doi.org/10.1038/s41586-026-10248-6" target="_blank" rel="noopener"><em>Nature</em> 653, 528–537 (2026)</a></p>
+      <p class="footnote" id="ref3"><sup>3</sup> Li SH, Wang B <em>et al.</em> <a href="https://doi.org/10.1016/j.chom.2026.04.004" target="_blank" rel="noopener"><em>Cell Host &amp; Microbe</em> 34, 873–887 (2026)</a></p>
+      <p class="footnote" id="ref4"><sup>4</sup> Bianchi M <em>et al.</em> <a href="https://doi.org/10.1016/j.immuni.2018.07.009" target="_blank" rel="noopener"><em>Immunity</em> 49, 288–300 (2018)</a></p>
+      <p class="footnote" id="ref5"><sup>5</sup> Antanasijevic A <em>et al.</em> <a href="https://doi.org/10.1038/s41467-021-25087-4" target="_blank" rel="noopener"><em>Nature Communications</em> 12, 4817 (2021)</a></p>
     </div>
 
-  </div>
-</section>
-
-<!-- ======================================================
-     TWO FIGURES (optional)
-     Delete this whole section if you only want one figure.
-====================================================== -->
-<section class="block tinted">
-  <div class="wrap">
-    <div class="grid grid-2">
-
-      <figure class="photo">
-        <div class="frame">
-          Figure placeholder<br>images/research2.jpg
-        </div>
-        <figcaption><span class="todo">[Caption]</span></figcaption>
-      </figure>
-
-      <figure class="photo">
-        <div class="frame">
-          Figure placeholder<br>images/research3.jpg
-        </div>
-        <figcaption><span class="todo">[Caption]</span></figcaption>
-      </figure>
-
-    </div>
   </div>
 </section>
 
 <!-- ======================================================
      RESEARCH INTERESTS
-     Short list, not full project descriptions. Add or remove <li> lines freely.
+     One line each: the direction in bold, then what it means in practice.
+     Add or remove <li> lines freely.
 ====================================================== -->
 <section class="block">
   <div class="wrap narrow">
@@ -120,14 +107,44 @@
       <h2>Research interests</h2>
     </div>
     <ul class="interests">
-      <li>Cryo-EM-driven structural vaccinology integrated with AI-based protein design</li>
-      <li>Cryo-EM-based polyclonal epitope mapping (cryo-EMPEM) for antibody discovery
-      and repertoire analysis</li>
-      <li>Structural and mechanistic dissection of immune imprinting dynamics</li>
-      <li>Development of broadly neutralizing antibodies for therapeutic applications</li>
-      <li>Structure-based antibody engineering</li>
-      <li>Antibody discovery using phage-displayed antibody libraries</li>
+      <li><strong>Broadly neutralizing antibodies</strong> &mdash; structural definition of the epitopes and binding modes that confer breadth, and of the molecular features that recur in unrelated individuals</li>
+      <li><strong>Immune imprinting</strong> &mdash; how an imprinted repertoire evolves with subsequent infection and vaccination, and whether it can be redirected</li>
+      <li><strong>Polyclonal epitope mapping</strong> &mdash; cryo-EMPEM of human and animal sera to resolve entire antibody landscapes elicited by infection or immunization</li>
+      <li><strong>Immunogen design</strong> &mdash; AI-based protein design of antigens, and of the way they are displayed, to focus the response on conserved epitopes; cryo-EM confirms the target epitope is presented as designed before immunization</li>
+      <li><strong>Viral inhibitor design</strong> &mdash; designed binders that block receptor engagement or enzymatic activity on viral surface proteins</li>
+      <li><strong>Antibody discovery and engineering</strong> &mdash; phage-displayed libraries and structure-guided optimization toward therapeutic antibodies</li>
+      <li><strong>Emerging viruses</strong> &mdash; structural characterization of the surface glycoproteins of hantaviruses and SFTSV, and of the antibody responses they elicit</li>
     </ul>
+  </div>
+</section>
+
+<!-- ======================================================
+     HOW WE DETERMINE A STRUCTURE
+     Background for readers new to cryo-EM. The figure is shown whole (not
+     cropped), so any wide diagram can replace it.
+====================================================== -->
+<section class="block">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Background</p>
+      <h2>How we determine a structure</h2>
+    </div>
+
+    <div class="narrow" style="margin: 0 auto 30px;">
+      <p>Single-particle cryo-electron microscopy turns a purified sample into an atomic
+      model. The complex is frozen so quickly that the surrounding water never forms ice
+      crystals, and tens of thousands of individual particles are then imaged in random
+      orientations. Combining those images computationally gives a three-dimensional
+      density map detailed enough to trace the protein chain and place individual side
+      chains.</p>
+    </div>
+
+    <figure class="photo figure-plain">
+      <div class="frame">
+        <img src="images/cryoem-workflow.webp" alt="Five steps of a single-particle cryo-EM experiment: sample purification by size-exclusion chromatography, vitrification on a grid, data collection on the microscope, image processing, and building an atomic model into the density map" loading="lazy">
+      </div>
+    </figure>
+
   </div>
 </section>
 
