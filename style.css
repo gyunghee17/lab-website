@@ -508,7 +508,9 @@ section.block.tab-panel { padding-top: 26px; }
 .news p { margin: 0; }
 @media (max-width: 560px) {
   .news li, .news li.with-thumb { grid-template-columns: 1fr; gap: 4px; }
-  .news-thumb { max-width: 200px; margin: 6px 0; }
+  /* Stacked on a phone, the picture sits on its own line, so centre it
+     instead of leaving all the empty space on one side. */
+  .news-thumb { max-width: 200px; margin: 6px auto; }
 }
 
 /* ============================================================
