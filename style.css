@@ -318,7 +318,9 @@ section.block:not(.tinted):has(+ section.block.tinted) { padding-bottom: 28px; }
 .pub .authors .me { color: var(--ink); font-weight: 600; }
 .pub .venue { font-size: .9rem; color: var(--ink-soft); margin: 0; }
 .pub .venue em { font-style: italic; font-weight: 600; color: var(--ink); }
-.pub .venue a { text-decoration: none; }
+/* Journal names carry their own <em>; a plain-text link such as
+   "Author interview" needs the colour and underline itself. */
+.pub .venue a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 .pub .venue a em { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 
 /* Author markers (* and #). The asterisk is small, so it is set a little
