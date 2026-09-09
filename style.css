@@ -359,7 +359,10 @@ sup { font-size: .85em; line-height: 0; vertical-align: super; }
 /* ============================================================
    Research interests
    ============================================================ */
-.interests { list-style: none; margin: 0; padding: 0; }
+/* The list keeps a readable measure even when its section runs full width
+   (the overview figure above it needs the whole page). */
+.interests { list-style: none; margin: 0 auto; padding: 0; max-width: 760px; }
+.figure-plain + .interests { margin-top: 36px; }
 .interests li {
   position: relative; padding: 7px 0 7px 26px; border-bottom: 1px solid var(--rule);
   color: var(--ink-soft);
