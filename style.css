@@ -283,8 +283,13 @@ section.block:not(.tinted):has(+ section.block.tinted) { padding-bottom: 28px; }
 /* Year column is sized to "2022.10 – 2026.08", which measures 135px. */
 .timeline li {
   display: grid; grid-template-columns: 140px 1fr; gap: 16px;
-  padding: 15px 0; border-bottom: 1px solid var(--rule);
+  padding: 9px 0; border-bottom: 1px solid var(--rule);
 }
+/* First row sits right under the heading, last row right above the next one. */
+.timeline li:first-child { padding-top: 2px; }
+.timeline li:last-child  { padding-bottom: 0; }
+/* Headings that open a section of the CV. */
+.timeline + h2 { margin-top: 30px; }
 /* Use class="timeline timeline--short" for lists whose years are just "2026".
    The narrower column gives the text 666px instead of 558px, which is enough
    for the longest society name to stay on one line. */
@@ -537,8 +542,10 @@ section.block.tab-panel { padding-top: 26px; }
 .info-row dd { margin: 0; overflow-wrap: anywhere; }
 
 /* Narrow sidebar version (PI page): label above the value. */
-.pi-contact .info-row { grid-template-columns: 1fr; gap: 3px; padding: 12px 0; }
+.pi-contact .info-row { grid-template-columns: 1fr; gap: 3px; padding: 7px 0; }
 .pi-contact .info-row dt { padding-top: 0; }
+.pi-contact .info-row:first-child { padding-top: 0; }
+.pi-contact .info-row:last-child  { padding-bottom: 0; }
 
 .map-frame {
   aspect-ratio: 4 / 3; border-radius: 10px; overflow: hidden;
