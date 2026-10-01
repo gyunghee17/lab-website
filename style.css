@@ -140,6 +140,12 @@ nav.main-nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
   color: var(--ink-faint); font-weight: 400; margin-bottom: 9px;
 }
 .hero .eyebrow { color: var(--accent); }
+/* 히어로 상단 연구실 로고. 폭만 바꾸면 크기가 조절됩니다. */
+.hero-logo {
+  display: block; width: 100%; max-width: 420px; height: auto;
+  margin: 0 auto 14px;
+}
+@media (max-width: 620px) { .hero-logo { max-width: 300px; } }
 .hero h1 { max-width: 17ch; margin-left: auto; margin-right: auto; margin-bottom: .4em; }
 .hero .lede {
   font-size: 1.1rem; color: var(--ink-soft); margin: 0 auto;
